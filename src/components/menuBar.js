@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Grid, Menu, Segment } from 'semantic-ui-react'
 
-export default class MenuExampleStackable extends Component {
-  state = {}
+export default class MenuExampleTabularOnLeft extends Component {
+  state = { activeItem: 'bio' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -10,35 +10,39 @@ export default class MenuExampleStackable extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu stackable>
-        <Menu.Item>
-          <img src='/images/logo.png' />
-        </Menu.Item>
+      <Grid>
+        <Grid.Column width={4}>
+          <Menu fluid vertical tabular>
+            <Menu.Item
+              name='bio'
+              active={activeItem === 'bio'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              name='pics'
+              active={activeItem === 'pics'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              name='companies'
+              active={activeItem === 'companies'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              name='links'
+              active={activeItem === 'links'}
+              onClick={this.handleItemClick}
+            />
+          </Menu>
+        </Grid.Column>
 
-        <Menu.Item
-          name='features'
-          active={activeItem === 'features'}
-          onClick={this.handleItemClick}
-        >
-          Home
-        </Menu.Item>
-
-        <Menu.Item
-          name='testimonials'
-          active={activeItem === 'testimonials'}
-          onClick={this.handleItemClick}
-        >
-          TestDrive
-        </Menu.Item>
-
-        <Menu.Item
-          name='sign-in'
-          active={activeItem === 'sign-in'}
-          onClick={this.handleItemClick}
-        >
-          Registros
-        </Menu.Item>
-      </Menu>
+        <Grid.Column stretched width={12}>
+          <Segment>
+            This is an stretched grid column. This segment will always match the
+            tab height
+          </Segment>
+        </Grid.Column>
+      </Grid>
     )
   }
 }
