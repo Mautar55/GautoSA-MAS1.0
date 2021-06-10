@@ -9,17 +9,10 @@ function TestDrive() {
 
     const [value, setValue] = useState('');
     const [options, setOptions] = useState('');
-    const [cantidad, setCantidad] = useState('');
-
-    let cantidades = 1;
 
     const marcaClicked = () => {
         setValue('');
     }
-
-
-
-
     const marcaOptions = [
         { key: 'af', value: 'Toyota', text: 'Toyota' },
         { key: 'ax', value: 'Ford', text: 'Ford' },
@@ -28,11 +21,11 @@ function TestDrive() {
         { key: 'as', value: 'Audi', text: 'Audi' },
     ];
     const fordOptions = [
-        { key: 'af', value: 'Ecosport', text: 'Ecosport', cantidad: cantidades },
-        { key: 'ax', value: 'Escord', text: 'Escord', cantidad: cantidades },
-        { key: 'al', value: 'Fiesta', text: 'Fiesta',cantidad: cantidades },
-        { key: 'dz', value: 'Falcon', text: 'Falcon',cantidad: cantidades },
-        { key: 'as', value: 'Ka', text: 'Ka',cantidad: cantidades },
+        { key: 'af', value: 'Ecosport', text: 'Ecosport' },
+        { key: 'ax', value: 'Escord', text: 'Escord' },
+        { key: 'al', value: 'Fiesta', text: 'Fiesta' },
+        { key: 'dz', value: 'Falcon', text: 'Falcon' },
+        { key: 'as', value: 'Ka', text: 'Ka' },
     ];
     const toyotaOptions = [
         { key: 'af', value: 'Corolla', text: 'Corolla' },
@@ -101,7 +94,8 @@ function TestDrive() {
                     <Button fluid positive type='submit'>Solicitar Turno</Button>
                     <Divider clearing />
 
-                   
+                    <Button fluid negative type='button'>Cancelar</Button>
+                    <Divider clearing />
 
                 </Form>
                 {/* <Button content='Registrar Interesado' onClick={marcaClicked} icon='right arrow' labelPosition='right' /> */}
