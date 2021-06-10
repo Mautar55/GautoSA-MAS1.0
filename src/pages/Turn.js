@@ -1,17 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { Container } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
+import * as React from 'react';
+import Paper from '@material-ui/core/Paper';
+import { ViewState } from '@devexpress/dx-react-scheduler';
+import {
+  Scheduler,
+  DayView,
+  Appointments,
+} from '@devexpress/dx-react-scheduler-material-ui';
 
 
-function Turn() {
-  
-  return (
-    <>
-      <Container>
-        <h2>Turno</h2>
-      </Container>
-    </>
-  );
-}
+const currentDate = '2018-11-01';
+const schedulerData = [
+  { startDate: '2018-11-01T09:45', endDate: '2018-11-01T11:00', title: 'Meeting' },
+  { startDate: '2018-11-01T12:00', endDate: '2018-11-01T13:30', title: 'Go to a gym' },
+];
 
-export default Turn;
+export default () => (
+  <Paper>
+    <Scheduler
+      data={schedulerData}
+    >
+      <ViewState
+        currentDate={currentDate}
+      />
+      <DayView
+        startDayHour={8}
+        endDayHour={16}
+      />
+      <Appointments />
+    </Scheduler>
+  </Paper>
+);

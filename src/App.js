@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
-import MenuBar from './components/menuBar'
+import MenuBar from './components/menu'
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Turn from "./pages/Turn";
 import TestDrive from "./pages/TestDrive";
 import { Container, Button, Header } from "semantic-ui-react";
+
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/turn" component={Turn} />
         <Route exact path="/testdrive" component={TestDrive} />
       </Container>
+   
     </Router>
   );
 }
