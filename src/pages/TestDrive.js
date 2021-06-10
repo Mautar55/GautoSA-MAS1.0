@@ -9,6 +9,7 @@ function TestDrive() {
 
     const [value, setValue] = useState('');
     const [options, setOptions] = useState('');
+    const [datos, setDatos] = useState('');
 
     const marcaClicked = () => {
         setValue('');
@@ -51,6 +52,10 @@ function TestDrive() {
         }
         //setValue(data.value);
     };
+    const HandlesModel = (event, data) => {
+        
+        setDatos(data.value);
+    };
     return (
         <>
             <Container>
@@ -75,27 +80,19 @@ function TestDrive() {
                                 <label>Modelo del vehiculo</label>
                                 <Dropdown
                                     label="Seleccione una modelo"
-                                    onChange={handleSelectMarca}
+                                    onChange={HandlesModel}
                                     options={options}
                                 />
+                                {datos && 
+                                <h1>{datos}</h1>
+                                }
                             </Form.Field>
 
-                            <Form.Field>
-                                <label>Cantidad disponible</label>
-                                <Label as='a'>11 unidades</Label>
-                            </Form.Field>
+
 
                         </>
                     }
-                    <Date></Date>
 
-                    <Divider clearing />
-
-                    <Button fluid positive type='submit'>Solicitar Turno</Button>
-                    <Divider clearing />
-
-                    <Button fluid negative type='button'>Cancelar</Button>
-                    <Divider clearing />
 
                 </Form>
                 {/* <Button content='Registrar Interesado' onClick={marcaClicked} icon='right arrow' labelPosition='right' /> */}
