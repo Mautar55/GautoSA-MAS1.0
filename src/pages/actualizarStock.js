@@ -18,8 +18,6 @@ function TestDrive() {
     }
 
 
-
-
     const marcaOptions = [
         { key: 'af', value: 'Toyota', text: 'Toyota' },
         { key: 'ax', value: 'Ford', text: 'Ford' },
@@ -50,7 +48,8 @@ function TestDrive() {
     ];
 
     const handleSelectMarca = (event, data) => {
-        console.log(data.value);
+        console.log(data);
+        
         if (data.value == 'Toyota') {
             setOptions(toyotaOptions);
         } if (data.value == 'Ford') {
@@ -58,13 +57,17 @@ function TestDrive() {
         }
         //setValue(data.value);
     };
+
+
+
+    
     return (
         <>
             <Container>
                 <Divider clearing />
                 <Header as='h2' icon textAlign='center'>
                     <Icon name='drivers license' circular />
-                    <Header.Content>Turno de TestDrive</Header.Content>
+                    <Header.Content>Actualizar Stock</Header.Content>
                 </Header>
                 <Divider clearing />
                 <Form>

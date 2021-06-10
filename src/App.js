@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Turn from "./pages/Turn";
-import TestDrive from "./pages/TestDrive";
+import MedioDePago from "./pages/Mdpago";
+import ActualizarStock from "./pages/actualizarStock";
 import { Container, Button, Header } from "semantic-ui-react";
 
 
@@ -22,7 +23,8 @@ function App() {
       <Container>
         <Route exact path="/register" component={Register} />
         <Route exact path="/turn" component={Turn} />
-        <Route exact path="/testdrive" component={TestDrive} />
+        <Route exact path="/actualizarStocks" component={ActualizarStock} />
+        <Route exact path="/mediodepago" component={MedioDePago} />
       </Container>
    
     </Router>

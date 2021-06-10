@@ -57,7 +57,7 @@ function TestDrive() {
                 <Divider clearing />
                 <Header as='h2' icon textAlign='center'>
                     <Icon name='drivers license' circular />
-                    <Header.Content>Turno de TestDrive</Header.Content>
+                    <Header.Content>Medio de Pagos</Header.Content>
                 </Header>
                 <Divider clearing />
                 <Form>
@@ -81,21 +81,18 @@ function TestDrive() {
                             </Form.Field>
 
                             <Form.Field>
-                                <label>Cantidad disponible</label>
-                                <Label as='a'>11 unidades</Label>
+                                <label>Medio de Pago</label>
+                                <Label as='a'>Efectivo</Label>
+                                <Label as='a'>Financiacion</Label>
                             </Form.Field>
 
                         </>
                     }
-                    <Date></Date>
+                    
 
                     <Divider clearing />
 
-                    <Button fluid positive type='submit'>Solicitar Turno</Button>
-                    <Divider clearing />
-
-                    <Button fluid negative type='button'>Cancelar</Button>
-                    <Divider clearing />
+                    
 
                 </Form>
                 {/* <Button content='Registrar Interesado' onClick={marcaClicked} icon='right arrow' labelPosition='right' /> */}
