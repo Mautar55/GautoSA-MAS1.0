@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Container>
-        <h2>asd</h2>
+        <h2>GAUTO S.A.</h2>
       </Container>
     </>
   );

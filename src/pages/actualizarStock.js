@@ -101,7 +101,7 @@ function TestDrive() {
 
                     <Divider clearing />
 
-                    <Button fluid positive type='submit'>Solicitar Turno</Button>
+                    <Button fluid positive type='submit'>Actualizar</Button>
                     <Divider clearing />
 
                    
